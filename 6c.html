@@ -1,0 +1,117 @@
+<html>
+<head>
+<!-- Include Google Maps Javascript Library -->
+<script type="text/javascript" src="http://maps.google.com/maps?file=api&v=1& key=
+ABQIAAAA01HpWF7mf2aW91RNaGDc7xTfGML3OZxtDDthfq-aZ1uFtrk9MRS_VWEizymnfki_h89lqU7A0ts2PA">
+</script>
+
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
+type="text/javascript"></script>
+
+<style type="text/css">
+@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+#feedControl {
+margin-top : 10px;
+margin-left: auto;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
+</style>
+<script type="text/javascript">
+function load() {
+var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
+new GFdynamicFeedControl(feed, "feedControl");
+
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
+
+
+
+
+
+<script type="text/javascript">
+function load()
+  {
+    if (GBrowserIsCompatible())
+    {
+      // create map component in div with the id = "map"
+      var map = new GMap2(document.getElementById("map"));
+      // create map components components
+      map.addControl(new GSmallMapControl());
+      map.addControl(new GMapTypeControl());
+      // create center point when map is displayed
+      map.setCenter(new GLatLng(19.2045, 72.8376), 13);
+      map.openInfoWindow(map.getCenter(),
+                         "<b>Your Company Here</b>");
+      // re-open the info balloon if they close it
+      var point = new GLatLng(19.2045, 72.8376);
+      map.addOverlay(createMarker(point, 1));
+    }
+  }
+
+  function createMarker(point, number)
+  {
+    var marker = new GMarker(point);
+    // create clickable point with title for address
+    GEvent.addListener(marker, "click", function()
+    {
+       marker.openInfoWindowHtml("<b>Your Company Here</b>");
+    });
+    return marker;
+  }
+
+  function retrieveExternalData()
+  {
+      var script = document.createElement("script");
+     <!-- script.src ='http://www.example.com/mashups/someservice'; -->
+	 script.src ='http://www.samplewebi.esy.es/AddUpdateDeleteSearch/index.php';
+      script.type = 'text/javascript';
+      document.body.appendChild(script);
+  }
+
+</script>
+<style>
+body
+{
+  background-color:rgb(255,51,66);
+  margin-top: 250px;
+}
+</style>
+</head>
+<body onload="load()">
+    <h3><center> Web Mashup</center></h3>
+<!-- Element to Contain a Google Map -->
+ <div id="map"
+         style="border-style:ridge; position: absolute;
+         left: 220px; top: 50px; width:400px; height:300px">
+</div>
+
+<!-- div to hold calendar-->
+    <div id="calendar"
+         style="border-style:ridge; position: absolute;
+         left: 630px; top: 50px; width:400px; height:300px">
+    <iframe src="https://www.google.com/calendar/embed?+src=o78s3eqe3ov403cpuav2bje5ja9j1tp2@+import.calendar.google.com&ctz=Asia/Calcutta"
+     style="border: 0" width="400" height="300" frameborder="0" scrolling="no">
+	 </iframe>
+    </div>
+
+    <div id="body">
+        <div id="feedControl">Loading...</div>
+    </div>
+
+     <div id="ufbadge"
+         style="border-style:ridge; position: absolute;
+         left: 520px; top: 370px; width:370px; height:460px">
+         <script type="text/javascript" src="http://output53.rssinclude.com/output?type=js&amp;id=1191066&amp;hash=5eb71e6748ad852f111d5b09caf4dce9"></script>
+         
+
+</body>
+</html>

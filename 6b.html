@@ -1,0 +1,44 @@
+<head>  
+<meta content="text/html; charset=utf-8">  
+<title>AJAX JSON by Javatpoint</title>  
+<script type="application/javascript">  
+function load()  
+{  
+   var url = 'JsonData.json';//use any url that have json data  
+   var request;  
+  
+   if(window.XMLHttpRequest){    
+    request=new XMLHttpRequest();//for Chrome, mozilla etc  
+   }    
+   else if(window.ActiveXObject){    
+    request=new ActiveXObject("Microsoft.XMLHTTP");//for IE only  
+   }    
+   request.onreadystatechange  = function(){  
+      if (request.readyState == 4  )  
+      {  
+        var jsonObj = JSON.parse(request.responseText);//JSON.parse() returns JSON object  
+        document.getElementById("name").innerHTML =  jsonObj.NAME;  
+        document.getElementById("age").innerHTML = jsonObj.ROLL; 
+	document.getElementById("add").innerHTML =  jsonObj.Address;  
+        document.getElementById("dept").innerHTML = jsonObj.Department;
+	document.getElementById("sal").innerHTML =  jsonObj.FEES;    
+        		  		  
+      }  
+   }  
+   request.open("GET", url, true);  
+   request.send();  
+}  
+</script>  
+</head>  
+<body>  
+<table>
+	<tr><td>Name: Vidhi</td><td><span id="name" style="margin:0 auto; bg-color="#ff0000"></span></td></tr>
+		<tr><td>ROLL NO: 55</td><td><span id="age"></span></td></tr>
+		<tr><td> Address: Kandivali(E)</td><td><span id="add"></span></td></tr>
+		<tr><td>  Department: IT</td><td> <span id="dept"></span></td></tr>
+		<tr><td> FEES: - </td><td> <span id="sal"></span></td></tr>
+</table>
+ 
+<button type="button" onclick="load()">Load Information</button> 
+</body>  
+</html>  

@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Javascript Event Handling</title>
+<script>
+         
+            function sayHello() {
+               alert("Hello World")
+            }
+        
+</script>
+<script>
+function myFunction() {
+    alert("Page is loaded");
+}
+
+function sayHello1() {
+               alert("Hello World Demo")
+            }
+
+        
+</script>
+
+<script type="text/javascript"> 
+function over() 
+{
+    document.write ("Mouse Over");
+}
+            
+function out() 
+{
+    document.write ("Mouse Out");
+}
+     
+</script>
+<script type="text/javascript">
+    function validate() {
+	if(document.login.userName.value=="" && document.login.password.value=="")
+		{
+			alert ("Please enter Valid Username and Password")
+		return false
+		}
+	if(document.login.userName.value=="")
+		{
+			alert ("Please enter User Name")
+			return false
+		}
+	if(document.login.password.value=="")
+		{
+			alert ("Please enter Password")
+		return false
+		}
+		
+	if(document.login.userName.value=="demo" && document.login.password.value=="demo")
+		{
+			window.open("welcome.html");
+		}
+	else 
+	{
+	return false
+	}
+            }
+
+</script> 
+
+</head>
+<body onload="myFunction()">
+<form>   <h1>onClick Event</h1>
+         <input type="button" onclick="sayHello()" 
+		 value="Say Hello" />
+</form>
+
+<h1>onLoad Event</h1>
+<input type="button" onclick="sayHello1()" 
+value="Say Hello" />
+<h2>Hello World!</h2>
+
+
+<h1>onmouseover and onmouseout Event</h1>
+<p>Bring your mouse inside the division to see the result:</p>
+      
+      <div onmouseover="over()">
+         <h2> This is inside the div </h2>
+      </div>
+	  
+	  <div onmouseout="out()">
+         <h2> This is Outside the div </h2>
+      </div>
+	  
+<form method="POST" action="welcome.html"  name="login" onsubmit="return validate()">
+<h1>onsubmit Event</h1>
+<input type="text" size="20" name="userName">
+<input type="text" size="20" name="password">
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>
+	
+
+   
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+p.round3 {
+    border: 2px solid red;
+    border-radius: 12px;
+}
+
+#example1 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+}
+
+#example2 {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+}
+
+h1 {
+    text-shadow: 2px 2px 8px #FF0000;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+div:hover {
+    width: 300px;
+}
+</style>
+</head>
+<body>
+
+<h2>The border-style Property</h2>
+<p>This property specifies what kind of border to display:</p>
+
+<p class="dotted">A dotted border.</p>
+<p class="dashed">A dashed border.</p>
+<p class="solid">A solid border.</p>
+<p class="double">A double border.</p>
+<p class="groove">A groove border.</p>
+<p class="ridge">A ridge border.</p>
+<p class="inset">An inset border.</p>
+<p class="outset">An outset border.</p>
+<p class="none">No border.</p>
+<p class="hidden">A hidden border.</p>
+<p class="mix">A mixed border.</p>
+
+
+<p>This property is used to add rounded borders to an element:</p>
+
+
+<p class="round3">Round border</p>
+
+<p><b>Note:</b> The "border-radius" property is not supported in IE8 and earlier versions.</p>
+
+<h2>box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green:</h2>
+<div id="example1">
+<p>Define multiple shadows.</p>
+</div>
+
+<h2>box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green:</h2>
+<div id="example2">
+<p>Define multiple shadows with blur effect.</p>
+</div>
+
+<h1>Text-shadow with blur effect</h1>
+
+<p><b>Note:</b> Internet Explorer 9 and earlier do not support the text-shadow property.</p>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+<div></div>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+
+</body>
+</html>

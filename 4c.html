@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Example of CSS3 rotate() Method</title>
+<style type="text/css">
+    img {
+		-webkit-transform: rotate(45deg);  /* Chrome, Safari, Opera */
+		   -moz-transform: rotate(45deg);  /* Firefox */
+			-ms-transform: rotate(45deg);  /* IE 9 */
+				transform: rotate(45deg);  /* Modern Browsers */    
+	}
+    .box{
+        margin: 50px;
+        width:120px;
+        height:110px;
+        background: url("star-fish.png") no-repeat;
+    }
+    img1 {
+		-webkit-transform: scale(0.5);  /* Chrome, Safari, Opera */
+		   -moz-transform: scale(0.5);  /* Firefox */
+			-ms-transform: scale(0.5);  /* IE 9 */
+				transform: scale(0.5);  /* Modern Browsers */
+				opacity: 0.5;
+	}
+    .box1{
+        margin: 50px;
+        width:103px;
+        height:130px;
+        background: url("octopus.png") no-repeat;
+    }
+	img2 {
+		-webkit-transform: skew(40deg, 35deg);  /* Chrome, Safari, Opera */
+		   -moz-transform: skew(40deg, 35deg);  /* Firefox */
+			-ms-transform: skew(40deg, 35deg);  /* IE 9 */
+				transform: skew(40deg, 35deg);  /* Modern Browsers */    
+	}
+    .box2{
+        margin: 50px;
+        width:153px;
+        height:103px;
+        background: url("snail.png") no-repeat;
+    }
+	img3 {
+		-webkit-transform: translate(200px);  /* Chrome, Safari, Opera */
+		   -moz-transform: translate(200px);  /* Firefox */
+			-ms-transform: translate(200px);  /* IE 9 */
+				transform: translate(200px);  /* Standard syntax */    
+	}
+    .box3{
+        margin: 50px;
+        width:153px;
+        height:103px;
+        background: url("tortoise.png") no-repeat;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+    	<img src="star-fish.png" alt="Star Fish">
+    </div>
+	<div class="box1">
+    	<img1 src="octopus.png" alt="Octopus">
+    </div>
+	<div class="box2">
+    	<img2 src="snail.png" alt="Snail">
+    </div>
+	<div class="box3">
+    	<img3 src="tortoise.png" alt="Tortoise">
+    </div>
+</body>
+</html>                                		

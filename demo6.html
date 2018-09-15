@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function openWin() {
+    window.open("https://www.tcetmumbai.in","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400");
+}
+
+</script>
+
+</head>
+
+<body>
+//to2
+<button onclick="timedText()">Try it</button>
+<p id="demo">Click on "Try it". I will display when two, four, and six seconds have passed.</p>
+
+//to1
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+<button onclick="setTimeout(myFunct(), 3000);">Try it</button>
+
+//Location object
+<h2>JavaScript</h2>
+<h3>The window.location object</h3>
+<p id="demo1x"></p>
+<p id="demo2x"></p>
+<p id="demo3x"></p>
+
+
+//screen object
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+
+//Window object
+<form>
+<input type="button" value="Open Window" onclick="openWin()">
+</form>
+
+
+//history object
+<p>Display the number of URLs in the history list:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demox"></p>
+
+<button onclick="goBack()">Go Back</button>
+
+<button onclick="goForward()">Go Forward</button>
+
+
+<p>Clicking on the Back button here will not result in any action, because there is no previous URL in the history list.</p>
+
+<p>Clicking on the Forward button here will not result in any action, because there is no next URL in the history list.</p>
+
+<script>
+function myFunction() {
+    document.getElementById("demox").innerHTML = history.length;
+}
+
+function goBack() {
+    window.history.back()
+}
+
+function goForward() {
+    window.history.forward()
+}
+//Screen object
+document.getElementById("demo1").innerHTML = 
+"Screen width is " + screen.width;
+
+document.getElementById("demo2").innerHTML = 
+"Screen height is " + screen.height;
+
+document.getElementById("demo3").innerHTML = 
+"Available screen width is " + screen.availWidth;
+
+document.getElementById("demo4").innerHTML = 
+"Available screen height is " + screen.availHeight;
+
+document.getElementById("demo5").innerHTML = 
+"Screen color depth is " + screen.colorDepth;
+
+document.getElementById("demo6").innerHTML = 
+"Screen pixel depth is " + screen.pixelDepth;
+
+//Location object
+document.getElementById("demo1x").innerHTML = 
+"Page hostname is: " + window.location.hostname;
+
+document.getElementById("demo2x").innerHTML =
+"Page path is: " + window.location.pathname;
+
+document.getElementById("demo3x").innerHTML =
+"The page protocol is: " + window.location.protocol;
+
+function newDoc() {
+    window.location.assign("https://tcetmumbai.in")
+}
+
+//to1
+function myFunct() {
+    alert('Hello');
+}
+
+//to2
+function timedText() {
+    setTimeout(myTimeout1, 2000) 
+    setTimeout(myTimeout2, 4000) 
+    setTimeout(myTimeout3, 6000) 
+}
+function myTimeout1() {
+    document.getElementById("demo").innerHTML = "2 seconds";
+}
+function myTimeout2() {
+    document.getElementById("demo").innerHTML = "4 seconds";
+}
+function myTimeout3() {
+    document.getElementById("demo").innerHTML = "6 seconds";
+}
+
+
+
+</script>
+
+//location object
+<input type="button" value="Load new document" 
+onclick="newDoc()">
+
+<?body>
+</html>
